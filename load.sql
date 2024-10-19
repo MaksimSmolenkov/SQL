@@ -26,4 +26,4 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-SELECT transfer_good_data('2023-01-01', '2023-12-31');
+SELECT transfer_good_data('2023-01-01'::TIMESTAMP, '2023-12-31'::TIMESTAMP);
