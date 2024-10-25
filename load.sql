@@ -17,10 +17,10 @@ BEGIN
    SELECT "ID", "userID", "Track", artist, genre, "City", time, "Report_date", "Weekday"
    FROM table1
    WHERE "Report_date" BETWEEN start_date AND end_date
-     AND NOT ("ID" IS NULL AND "userID" IS NULL AND "Track" IS NULL 
-              AND artist IS NULL AND genre IS NULL 
-              AND "City" IS NULL AND time IS NULL 
-              AND "Report_date" IS NULL AND "Weekday" IS NULL)
+     AND NOT ("ID" IS  NULL OR "userID" IS  NULL OR "Track" IS  NULL 
+          OR artist IS  NULL OR genre IS  NULL 
+          OR "City" IS  NULL OR time IS  NULL 
+          OR "Report_date" IS  NULL OR "Weekday" IS  NULL)
      AND "Report_date" IS NOT NULL;
    
 END;
